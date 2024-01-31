@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+
+  "name": "Example Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/HatzDev/fabric-better-template"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/${mod_id}/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "net.fabricmc.example.ExampleModMain"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "net.fabricmc.example.ExampleModClient"
+      }
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": "0.15.6",
+    "fabric-api": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-language-kotlin": ">=1.10.17+kotlin.1.9.22"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
